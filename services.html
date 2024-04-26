@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        h2 {
+            color: #007bff;
+        }
+        section {
+            margin: 20px 0;
+        }
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .service-card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            flex: 1 1 calc(33.33% - 20px);
+            max-width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+        }
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+        .service-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .service-details {
+            padding: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hospital Services</h1>
+    </header>
+
+    <section>
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <img src="emergency.jpeg" alt="Service 1">
+                <div class="service-details">
+                    <h3>Emergency Care</h3>
+                    <p>Our emergency department is available 24/7 to provide immediate care in critical situations.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="diagnos.jpg" alt="Service 2">
+                <div class="service-details">
+                    <h3>Primary Care</h3>
+                    <p>Our primary care physicians focus on preventive care, health maintenance, and early intervention.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="primary.jpg" alt="Service 3">
+                <div class="service-details">
+                    <h3>Diagnostic Imaging</h3>
+                    <p>State-of-the-art imaging facilities for precise and timely diagnostic services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact us for more information: contact@hospital.com</p>
+    </footer>
+</body>
+</html>

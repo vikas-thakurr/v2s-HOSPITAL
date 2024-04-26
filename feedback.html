@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serienty Health Care Center Feedback Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('feedbackbackground.jpg'); /* Replace 'background_image.jpg' with your image file */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .container {
+        width: 80%;
+        margin: 20px auto;
+    }
+    h2 {
+        text-align: center;
+        color: rgba(61, 67, 239, 0.863);
+    }
+    form {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.227); /* Adjust the alpha value to control transparency */
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"], select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #dfe9a7a5;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: rgba(255, 255, 255, 0.523);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #4721d3;
+    }
+</style>
+</head>
+<body> 
+    <form method="post" action="feedbackresponse.php">
+<div class="container">
+    <h2>Serienty Health Care Center Feedback Form</h2>
+    <form id="feedbackForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        
+        <label for="service">Service/Product:</label>
+        <select id="service" name="service" required>
+            <option value="">Select one...</option>
+            <option value="Service A">Service A</option>
+            <option value="Service B">Service B</option>
+            <option value="Product A">Product A</option>
+            <option value="Product B">Product B</option>
+            <option value="Other">Other</option>
+        </select>
+        
+        <label for="satisfaction">How satisfied are you?</label>
+        <select id="satisfaction" name="satisfaction" required>
+            <option value="">Select one...</option>
+            <option value="Very Satisfied">Very Satisfied</option>
+            <option value="Satisfied">Satisfied</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Dissatisfied">Dissatisfied</option>
+            <option value="Very Dissatisfied">Very Dissatisfied</option>
+        </select>
+        
+        <label for="comments" required >Comments: </label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(event){
+        event.preventDefault();
+        var formData = new FormData(this);
+        var feedbackData = {};
+        formData.forEach(function(value, key){
+            feedbackData[key] = value;
+        });
+        console.log(feedbackData);
+        // Here you can send the feedbackData to your server using AJAX or perform any other actions
+        alert("Thank you for your feedback!");
+        // Reset form fields after submission
+        document.getElementById("feedbackForm").reset();
+    });
+</script>
+</form>
+</body>
+</html>
